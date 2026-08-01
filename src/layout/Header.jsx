@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/header.css';
 
@@ -10,7 +10,7 @@ const Header = ({ title, onMenuClick }) => {
     localStorage.removeItem('user');
     localStorage.removeItem('filialId');
     localStorage.removeItem('token');
-    window.location.href = 'http://localhost:5173/login';
+    window.location.href = '/login';
   };
 
   return (
@@ -32,7 +32,7 @@ const Header = ({ title, onMenuClick }) => {
             <circle cx="11" cy="11" r="8" />
             <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
-          <input type="text" placeholder="Қидириш..." />
+          <input type="text" placeholder="ТљРёРґРёСЂРёС€..." />
         </div>
 
         <div className="header-actions">
@@ -44,7 +44,7 @@ const Header = ({ title, onMenuClick }) => {
             <span className="notification-dot"></span>
           </button>
 
-          <button className="header-btn" onClick={handleLogout} title="Чиқиш">
+          <button className="header-btn" onClick={handleLogout} title="Р§РёТ›РёС€">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
               <polyline points="16 17 21 12 16 7" />
@@ -54,10 +54,10 @@ const Header = ({ title, onMenuClick }) => {
         </div>
 
         <div className="user-profile">
-          <div className="user-avatar">ДМ</div>
+          <div className="user-avatar">Р”Рњ</div>
           <div className="user-info">
-            <span className="user-name">Директор</span>
-            <span className="user-role">Бош директор</span>
+            <span className="user-name">Р”РёСЂРµРєС‚РѕСЂ</span>
+            <span className="user-role">Р‘РѕС€ РґРёСЂРµРєС‚РѕСЂ</span>
           </div>
         </div>
       </div>
@@ -66,3 +66,4 @@ const Header = ({ title, onMenuClick }) => {
 };
 
 export default Header;
+
