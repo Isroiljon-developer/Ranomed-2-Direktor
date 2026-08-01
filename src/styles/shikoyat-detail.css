@@ -1,0 +1,212 @@
+/* Shikoyat Detail Styles */
+
+.shikoyat-detail {
+  padding: 0;
+}
+
+.not-found {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.not-found h2 {
+  margin-bottom: 20px;
+  color: var(--gray-600);
+}
+
+.detail-header {
+  margin-bottom: 24px;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--gray-100);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-700);
+  transition: var(--transition);
+}
+
+.back-btn:hover {
+  background: var(--gray-200);
+}
+
+.shikoyat-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.shikoyat-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.shikoyat-status-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shikoyat-status-icon svg {
+  color: var(--primary-red);
+}
+
+.shikoyat-title-info {
+  flex: 1;
+}
+
+.shikoyat-title-info h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 6px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-badge.danger {
+  background: rgba(229, 57, 53, 0.1);
+  color: var(--primary-red);
+}
+
+.status-badge.success {
+  background: rgba(67, 160, 71, 0.1);
+  color: var(--primary-green);
+}
+
+.shikoyat-date {
+  color: var(--gray-500);
+  font-size: 14px;
+}
+
+.shikoyat-content {
+  padding: 24px;
+}
+
+.shikoyat-text-section {
+  margin-bottom: 24px;
+}
+
+.shikoyat-text-section h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-600);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.shikoyat-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--gray-800);
+  background: var(--gray-50);
+  padding: 20px;
+  border-radius: var(--radius);
+  border-left: 4px solid var(--primary-red);
+}
+
+.shikoyat-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.info-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: var(--gray-50);
+  border-radius: var(--radius);
+}
+
+.info-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--white);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-blue);
+  flex-shrink: 0;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: 12px;
+  color: var(--gray-500);
+  margin-bottom: 4px;
+}
+
+.info-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.info-sub {
+  font-size: 12px;
+  color: var(--gray-600);
+  margin-top: 2px;
+}
+
+.shikoyat-actions {
+  display: flex;
+  gap: 12px;
+  padding: 24px;
+  border-top: 1px solid var(--gray-200);
+  background: var(--gray-50);
+}
+
+.shikoyat-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .shikoyat-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .shikoyat-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shikoyat-actions {
+    flex-direction: column;
+  }
+
+  .shikoyat-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
