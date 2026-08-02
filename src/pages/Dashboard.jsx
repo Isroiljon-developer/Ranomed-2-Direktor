@@ -262,8 +262,8 @@ const Dashboard = () => {
                             <td style={{ padding: '12px 16px', fontSize: '13px', color: '#64748b' }}>{n.dept}</td>
                             <td style={{ padding: '12px 16px', textAlign: 'center', fontWeight: 700, color: '#1d4ed8' }}>{counts.kunduzgi} kun</td>
                             <td style={{ padding: '12px 16px', textAlign: 'center', fontWeight: 700, color: '#92400e' }}>{counts.kechki} kun</td>
-                            <td style={{ padding: '12px 16px', textAlign: 'center', fontWeight 700, color: '#5b21b6' }}>{counts.tungi} kun</td>
-                            <td style={{ padding: '12px 16px', textAlign: 'center', fontWeight 700, color: '#166534' }}>{counts.dam_olish} kun</td>
+                            <td style={{ padding: '12px 16px', textAlign: 'center', fontWeight: 700, color: '#5b21b6' }}>{counts.tungi} kun</td>
+                            <td style={{ padding: '12px 16px', textAlign: 'center', fontWeight: 700, color: '#166534' }}>{counts.dam_olish} kun</td>
                             <td style={{ padding: '12px 16px', textAlign: 'center', fontWeight: 800, fontSize: '14px', color: '#0f172a' }}>{counts.total} smena</td>
                           </tr>
                         );
