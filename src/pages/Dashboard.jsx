@@ -138,8 +138,8 @@ const Dashboard = () => {
       <div className="dashboard">
         <div className="dashboard-header">
           <div>
-            <h1>Хуш келибсиз, Директор!</h1>
-            <p>Бугун {new Date().toLocaleDateString('uz-UZ', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+            <h1>Xush kelibsiz, Direktor!</h1>
+            <p>Bugun {new Date().toLocaleDateString('uz-UZ', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
           </div>
           <div className="realtime-indicator">
             <span className="pulse-dot"></span>

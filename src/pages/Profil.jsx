@@ -75,7 +75,7 @@ const Profil = () => {
                     </div>
                     <div className="flex items-center gap-3 text-slate-600 text-sm">
                         <MapPin size={16} className="text-slate-400" />
-                        <span>{user?.Branch?.name || 'Бош Директор'}</span>
+                        <span>{user?.Branch?.name || 'Bosh Direktor'}</span>
                     </div>
                 </div>
              </div>

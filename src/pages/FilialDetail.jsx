@@ -129,7 +129,7 @@ const FilialDetail = () => {
                     <span className="info-value">{filial.telefon}</span>
                   </div>
                   <div className="info-row">
-                    <span className="info-label">Директор:</span>
+                    <span className="info-label">Direktor:</span>
                     <span className="info-value">{filial.direktor}</span>
                   </div>
                 </div>

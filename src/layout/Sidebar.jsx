@@ -5,36 +5,36 @@ import '../styles/sidebar.css';
 const Sidebar = ({ isOpen, isCollapsed, onToggle, onClose }) => {
   const menuItems = [
     {
-      section: "Асосий",
+      section: "Asosiy",
       items: [
-        { path: "/", label: "Бошқарув панели", icon: "dashboard" },
+        { path: "/", label: "Boshqaruv paneli", icon: "dashboard" },
       ]
     },
     {
-      section: "Молия ва ходимлар",
+      section: "Moliya va xodimlar",
       items: [
-        { path: "/bolimlar", label: "Бўлимлар", icon: "department" },
-        { path: "/moliya", label: "Молия", icon: "finance" },
-        { path: "/shifokorlar", label: "Шифокорлар", icon: "doctor" },
-        { path: "/xodimlar", label: "Ходимlar", icon: "staff" },
-        { path: "/hamshiralar-jadvali", label: "Ҳамширалар жадвали", icon: "nurse" },
+        { path: "/bolimlar", label: "Bo'limlar", icon: "department" },
+        { path: "/moliya", label: "Moliya", icon: "finance" },
+        { path: "/shifokorlar", label: "Shifokorlar", icon: "doctor" },
+        { path: "/xodimlar", label: "Xodimlar", icon: "staff" },
+        { path: "/hamshiralar-jadvali", label: "Hamshiralar jadvali", icon: "nurse" },
       ]
     },
     {
-      section: "Беморлар",
+      section: "Bemorlar",
       items: [
-        { path: "/bemorlar", label: "Беморлар тахлили", icon: "patients" },
-        { path: "/palatalar", label: "Палаталар", icon: "ward" },
-        { path: "/navbatlar", label: "Навбатлар", icon: "queue" },
+        { path: "/bemorlar", label: "Bemorlar tahlili", icon: "patients" },
+        { path: "/palatalar", label: "Palatalar", icon: "ward" },
+        { path: "/navbatlar", label: "Navbatlar", icon: "queue" },
       ]
     },
     {
-      section: "Тахлил",
+      section: "Tahlil",
       items: [
-        { path: "/telegram", label: "Телеграм тахлил", icon: "telegram" },
-        { path: "/shikoyatlar", label: "Шикоятлар", icon: "complaint", badge: 2 },
-        { path: "/sozlamalar", label: "Созламалар", icon: "settings" },
-        { path: "/profil", label: "Профил", icon: "profile" },
+        { path: "/telegram", label: "Telegram tahlil", icon: "telegram" },
+        { path: "/shikoyatlar", label: "Shikoyatlar", icon: "complaint", badge: 2 },
+        { path: "/sozlamalar", label: "Sozlamalar", icon: "settings" },
+        { path: "/profil", label: "Profil", icon: "profile" },
       ]
     }
   ];
@@ -179,7 +179,7 @@ const Sidebar = ({ isOpen, isCollapsed, onToggle, onClose }) => {
                 <path d="M15 18l-6-6 6-6" />
               )}
             </svg>
-            <span className="toggle-text">{isCollapsed ? '' : 'Йиғиш'}</span>
+            <span className="toggle-text">{isCollapsed ? '' : "Yig'ish"}</span>
           </button>
         </div>
       </aside>
