@@ -1,52 +1,24 @@
-﻿import axios from 'axios';
+const BASE_URL = 'http://localhost:9000/api';
 
-const BASE_URL = 'https://ranomed-2.onrender.com/api';
+const api = {
+  async request(endpoint, options = {}) {
+    const token = localStorage.getItem('token');
+    const headers = { 'Content-Type': 'application/json', ...options.headers };
+    if (token) headers['Authorization'] = `Bearer ${token}`;
 
-const api = axios.create({
-    baseURL: BASE_URL,
-});
-
-// Request interceptor for API calls
-api.interceptors.request.use(
-    async (config) => {
-        const token = localStorage.getItem('token');
-        if (token) {
-            config.headers.Authorization = `Bearer ${token}`;
-        }
-
-        // Handle FormData - axios naturally sets the correct Content-Type with boundary
-        if (config.data instanceof FormData) {
-            if (config.headers['Content-Type']) {
-                delete config.headers['Content-Type'];
-            }
-        } else if (config.headers && !config.headers['Content-Type']) {
-            config.headers['Content-Type'] = 'application/json';
-        }
-
-        return config;
-    },
-    (error) => {
-        return Promise.reject(error);
+    try {
+      const response = await fetch(`${BASE_URL}${endpoint}`, { ...options, headers });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(data.error || 'Server xatosi');
+      return data;
+    } catch (error) {
+      throw error;
     }
-);
-
-// Response interceptor for API calls
-api.interceptors.response.use(
-    (response) => {
-        return response.data;
-    },
-    async (error) => {
-        if (error.response && error.response.status === 401) {
-            localStorage.removeItem('token');
-            localStorage.removeItem('user');
-            localStorage.removeItem('isLoggedIn');
-            if (window.location.pathname !== '/login') {
-                window.location.href = '/login';
-            }
-        }
-        const message = error.response?.data?.error || error.response?.data?.message || error.message || 'Something went wrong';
-        return Promise.reject(new Error(message));
-    }
-);
+  },
+  get(endpoint) { return this.request(endpoint, { method: 'GET' }); },
+  post(endpoint, body) { return this.request(endpoint, { method: 'POST', body: JSON.stringify(body) }); },
+  put(endpoint, body) { return this.request(endpoint, { method: 'PUT', body: JSON.stringify(body) }); },
+  delete(endpoint) { return this.request(endpoint, { method: 'DELETE' }); }
+};
 
 export default api;

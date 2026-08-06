@@ -52,38 +52,38 @@ const Dashboard = () => {
   const kpiCards = [
     {
       icon: 'money',
-      value: (stats.todayRevenue || 0).toLocaleString() + ' сўм',
-      label: 'Бугунги тушум',
+      value: (stats.todayRevenue || 0).toLocaleString() + " so'm",
+      label: 'Bugungi tushum',
       color: 'blue'
     },
     {
       icon: 'patients',
       value: stats.todayPatients,
-      label: 'Бугунги беморlar',
+      label: 'Bugungi bemorlar',
       color: 'green'
     },
     {
       icon: 'queue',
       value: stats.appointmentsCount,
-      label: 'Фаол навбатлар',
+      label: 'Faol navbatlar',
       color: 'blue'
     },
     {
       icon: 'bed-occupied',
       value: stats.occupiedWards,
-      label: 'Банд палаталар',
+      label: 'Band palatalar',
       color: 'red'
     },
     {
       icon: 'bed-free',
       value: stats.freeWards,
-      label: 'Бўш палаталар',
+      label: "Bo'sh palatalar",
       color: 'green'
     },
     {
       icon: 'telegram',
       value: stats.telegramCount,
-      label: 'Телеграм навбатлар',
+      label: 'Telegram navbatlar',
       color: 'blue'
     },
   ];
@@ -134,7 +134,7 @@ const Dashboard = () => {
   };
 
   return (
-    <MainLayout title="Бошқарув панели">
+    <MainLayout title="Boshqaruv paneli">
       <div className="dashboard">
         <div className="dashboard-header">
           <div>
@@ -143,12 +143,12 @@ const Dashboard = () => {
           </div>
           <div className="realtime-indicator">
             <span className="pulse-dot"></span>
-            <span>Охирги янгиланиш: {formatTime(lastUpdate)}</span>
+            <span>Oxirgi yangilanish: {formatTime(lastUpdate)}</span>
           </div>
         </div>
 
         {loading ? (
-          <div className="loading-container">Юкланмоқда...</div>
+          <div className="loading-container">Yuklanmoqda...</div>
         ) : (
           <>
             {/* KPI Cards */}
@@ -170,7 +170,7 @@ const Dashboard = () => {
             <div className="charts-grid">
               <div className="chart-card">
                 <div className="chart-header">
-                  <h3 className="chart-title">Молиявий тренд (Ойлик)</h3>
+                  <h3 className="chart-title">Moliyaviy trend (Oylik)</h3>
                 </div>
                 <div className="chart-body">
                   <ResponsiveContainer width="100%" height="100%">
@@ -183,10 +183,10 @@ const Dashboard = () => {
                         tickFormatter={(v) => `${(v / 1000000).toFixed(1)}M`}
                       />
                       <Tooltip
-                        formatter={(value) => [`${value.toLocaleString()} сўм`, '']}
+                        formatter={(value) => [`${value.toLocaleString()} so'm`, '']}
                         contentStyle={{ borderRadius: 8, border: '1px solid #e9ecef' }}
                       />
-                      <Bar dataKey="tushum" name="Тушум" fill="#1e88e5" radius={[4, 4, 0, 0]} barSize={30} />
+                      <Bar dataKey="tushum" name="Tushum" fill="#1e88e5" radius={[4, 4, 0, 0]} barSize={30} />
                     </ComposedChart>
                   </ResponsiveContainer>
                 </div>
@@ -194,19 +194,19 @@ const Dashboard = () => {
 
               <div className="chart-card">
                 <div className="chart-header">
-                  <h3 className="chart-title">Бошқа кўрсаткичлар</h3>
+                  <h3 className="chart-title">Boshqa ko'rsatkichlar</h3>
                 </div>
                 <div className="chart-body" style={{ display: 'flex', flexDirection: 'column', gap: '20px', padding: '10px' }}>
                   <div className="stat-row">
-                    <span>Жами тушум:</span>
-                    <strong>{(stats.revenue || 0).toLocaleString()} сўм</strong>
+                    <span>Jami tushum:</span>
+                    <strong>{(stats.revenue || 0).toLocaleString()} so'm</strong>
                   </div>
                   <div className="stat-row">
-                    <span>Палаталар бандлиги:</span>
+                    <span>Palatalar bandligi:</span>
                     <strong>{stats.occupiedWards} / {stats.occupiedWards + stats.freeWards}</strong>
                   </div>
                   <div className="stat-row">
-                    <span>Телеграм навбатлар:</span>
+                    <span>Telegram navbatlar:</span>
                     <strong>{stats.telegramCount}</strong>
                   </div>
                 </div>
